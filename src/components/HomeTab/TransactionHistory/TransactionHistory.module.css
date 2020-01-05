@@ -1,0 +1,24 @@
+.transactionHistory {
+
+}
+
+.transactionTable {
+  border-collapse: collapse;
+}
+
+.transactionTable th {
+  background: #fff;
+}
+
+.transactionTable tr:nth-child(even) td {
+  background: #f5f5f5;
+}
+
+.transactionTable tr:nth-child(odd) td {
+  background: #eee;
+}
+
+.transactionTable td, .transactionTable th {
+  height: 40px;
+  padding: 0 10px;
+}
