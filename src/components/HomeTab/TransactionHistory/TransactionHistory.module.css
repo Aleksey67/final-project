@@ -1,6 +1,9 @@
 .transactionHistory {
 }
 
+.transactionHead {
+  display: none;
+}
 .transaction {
   width: 300px;
   margin: 0 0 15px;
@@ -28,24 +31,22 @@
   display: inline-block;
 }
 
-.transactionTable {
-  border-collapse: collapse;
+@media (min-width: 768px) {
+  .transactionHead {
+    display: block;
+  }
+  .transactionHead div {
+    display: inline-block;
+  }
+
+  .keyCell {
+    display: none;
+  }
+  .keyVal {
+    display: inline-block;
+    width: auto;
+  }
 }
 
-.transactionTable th {
-  background: #fff;
-}
-
-.transactionTable tr:nth-child(even) td {
-  background: #f5f5f5;
-}
-
-.transactionTable tr:nth-child(odd) td {
-  background: #eee;
-}
-
-.transactionTable td,
-.transactionTable th {
-  height: 40px;
-  padding: 0 10px;
+@media (min-width: 1280px) {
 }

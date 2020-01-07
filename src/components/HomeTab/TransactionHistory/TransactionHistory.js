@@ -61,6 +61,14 @@ class TransactionHistory extends React.Component {
     return (
       <div className={styles.transactionHistory}>
         <div>
+          <div className={styles.transactionHead}>
+            <div>Дата</div>
+            <div>Тип</div>
+            <div>Категория</div>
+            <div>Комментарий</div>
+            <div>Сумма</div>
+            <div>Баланс</div>
+          </div>
           {transactions.map(t => (
             <div key={t.id} className={styles.transaction}>
               <div className={styles.keyVal}>
@@ -94,30 +102,6 @@ class TransactionHistory extends React.Component {
             </div>
           ))}
         </div>
-        <table className={styles.transactionTable}>
-          <thead>
-            <tr>
-              <th>Дата</th>
-              <th>Тип</th>
-              <th>Категория</th>
-              <th>Комментарий</th>
-              <th>Сумма</th>
-              <th>Баланс</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transactions.map(t => (
-              <tr key={t.id}>
-                <td>{this.timestampToDate(t.date)}</td>
-                <td>{t.type === 'income' ? '+' : '-'}</td>
-                <td>{t.category}</td>
-                <td>{t.comment}</td>
-                <td>{t.amount}</td>
-                <td>{t.balanceAfter}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     );
   }
