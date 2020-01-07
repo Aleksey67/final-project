@@ -1,5 +1,31 @@
 .transactionHistory {
+}
 
+.transaction {
+  width: 300px;
+  margin: 0 0 15px;
+}
+.keyVal {
+  width: 100%;
+}
+.keyCell {
+  width: 50%;
+  display: inline-block;
+  padding: 0 0 0 18px;
+  line-height: 45px;
+}
+.transaction:nth-child(odd) .keyCell {
+  border-left: 8px solid #7e8c9e;
+}
+.transaction:nth-child(even) .keyCell {
+  border-left: 8px solid #e08a20;
+}
+.keyVal:nth-child(odd) {
+  background: #f3f6f6;
+}
+.valCell {
+  width: 50%;
+  display: inline-block;
 }
 
 .transactionTable {
@@ -18,7 +44,8 @@
   background: #eee;
 }
 
-.transactionTable td, .transactionTable th {
+.transactionTable td,
+.transactionTable th {
   height: 40px;
   padding: 0 10px;
 }
